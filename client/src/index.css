@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(215, 13%, 13%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(215, 13%, 13%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(215, 13%, 13%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(215, 16%, 25%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(215, 16%, 25%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(215, 13%, 13%);
+  --radius: 0.5rem;
+  --brand-blue: hsl(207, 90%, 54%);
+  --brand-teal: hsl(173, 58%, 39%);
+  --gradient-start: hsl(239, 56%, 73%);
+  --gradient-end: hsl(253, 42%, 62%);
+}
+
+.dark {
+  --background: hsl(215, 28%, 17%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(215, 32%, 27%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(215, 28%, 17%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(215, 28%, 17%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(215, 32%, 27%);
+  --input: hsl(215, 32%, 27%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(215, 32%, 27%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(215, 32%, 27%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(215, 20%, 65%);
+  --gradient-start: hsl(215, 58%, 25%);
+  --gradient-end: hsl(215, 64%, 30%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .skill-tag {
+    @apply px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200;
+  }
+
+  .skill-tag-blue {
+    @apply bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200;
+  }
+
+  .skill-tag-teal {
+    @apply bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200;
+  }
+
+  .skill-tag-purple {
+    @apply bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200;
+  }
+
+  .skill-tag-green {
+    @apply bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200;
+  }
+
+  .skill-tag-orange {
+    @apply bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-200;
+  }
+
+  .skill-tag-pink {
+    @apply bg-pink-100 dark:bg-pink-900/50 text-pink-800 dark:text-pink-200;
+  }
+}
