@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ThemeProvider from './components/theme-provider';
+import { ThemeProvider } from './components/theme-provider';
+
 import Home from './pages/home';
 import NotFound from './pages/not-found';
 import Navigation from './components/portfolio/navigation';
